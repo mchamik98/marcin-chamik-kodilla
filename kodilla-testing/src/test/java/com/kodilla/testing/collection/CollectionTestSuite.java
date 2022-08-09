@@ -32,10 +32,10 @@ public class CollectionTestSuite {
     void testOddNumbersExterminatorEmptyList (){
        //Given
         List<Integer> testingEmptyList = new ArrayList<>();
-
+        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
        //When
 
-        List<Integer> result = OddNumbersExterminator.exterminate(testingEmptyList);
+        List<Integer> result = oddNumbersExterminator.exterminate(testingEmptyList);
 
         List<Integer> expected = new ArrayList<>();
 
@@ -49,9 +49,10 @@ public class CollectionTestSuite {
     void testOddNumbersExterminatorNormalList(){
         //Given
         List<Integer> testList = List.of(123,244,621,232,122,177,524);
+        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         //When
 
-        List<Integer> result = OddNumbersExterminator.exterminate(testList);
+        List<Integer> result = oddNumbersExterminator.exterminate(testList);
 
         List<Integer> expected = List.of(244,232,122,524);
 
