@@ -7,18 +7,16 @@ import com.kodilla.good.patterns.challenges.food2door.transport.BikeTransport;
 
 public class ExtraFoodShop extends Shop {
 
-    @Override
-    public void setFields() {
-        this.informationService = new MailService();
-        this.orderRepository = new SqlRepository();
-        this.transport = new BikeTransport();
+
+    public ExtraFoodShop() {
+        super(new MailService(), new SqlRepository(), new BikeTransport());
     }
+
 
     @Override
     public String toString() {
         return "ExtraFoodShop";
     }
-
 
 
 

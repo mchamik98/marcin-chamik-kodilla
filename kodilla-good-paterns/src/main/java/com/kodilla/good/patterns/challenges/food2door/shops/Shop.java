@@ -11,11 +11,17 @@ import java.util.List;
 
 public abstract class Shop {
 
-    InformationService informationService;
-    OrderRepository orderRepository;
-    Transport transport;
+    private InformationService informationService;
+    private OrderRepository orderRepository;
+    private Transport transport;
 
-    abstract public void setFields();
+    Shop(InformationService informationService, OrderRepository orderRepository, Transport transport) {
+        this.informationService = informationService;
+        this.orderRepository = orderRepository;
+        this.transport = transport;
+    }
+
+
     abstract public String toString();
 
 

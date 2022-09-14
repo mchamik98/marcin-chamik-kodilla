@@ -36,7 +36,7 @@ public class PurchaseService {
 
         for (Map.Entry<ShopType, List<Choice>> entry : elementsToBuy.entrySet()) {
             Shop chosenShop = shops.get(entry.getKey());
-            chosenShop.setFields();
+
             System.out.println("Order in shop " + chosenShop + " successfully proceed? " + chosenShop.process(user, orderTime, entry.getValue()) + "\n \n");
         }
     }
